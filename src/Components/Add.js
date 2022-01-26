@@ -16,11 +16,16 @@ export const Add = (props)=>{
     //Pass Add link function to the parent AppKaho.js
     //Reset All states after adding
     const realAddLink = () =>{
+      let checkUrl = url.split('.')
+      if(checkUrl.length > 1 && checkUrl.filter((a)=> typeof a === 'string' && a.length>0).length === checkUrl.length){
         props.clickAdd(name, url, tag)
-        setShow(false)
-        setName('')
-        setTag([])
-        setUrl('')
+      } else{
+        alert ('Invalid URL detected, please try again')
+      } 
+      setShow(false)
+      setName('')
+      setTag([])
+      setUrl('')
     } 
     return (
         <>

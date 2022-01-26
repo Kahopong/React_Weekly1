@@ -1,14 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import Appkaho from './Appkaho';
 import reportWebVitals from './reportWebVitals';
 import './Appkaho.css';
 
 ReactDOM.render( 
     <React.StrictMode>
-    {/* <App /> */}
     <Appkaho />
     </React.StrictMode>,
     document.getElementById('root')
